@@ -1,38 +1,51 @@
 <!DOCTYPE html>
 <html>
+<!-- Christopher Ayers
+     Full Sail University
+     Week 1: Milestone
+     Last Update: Jul-12-2014
+-->
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
-    <link rel="stylesheet" href="css/style">
+    <title>eLEAF Project Management Software</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
-<div id="topBar">
+<div id="topBar"> <!-- Top Nav Bar -->
+    <h2>Project Management Software for Landscapers</h2>
+    <img id="logo" src="img/logo.png" />
+
+</div> <!-- End Top Nav Bar -->
+
+<div id="midBar"> <!-- Sign in Section -->
+
+</div> <!-- End Sign in Section -->
+
+<div id="botBar"> <!-- Content Section -->
+    <p>
+        Sign-Up Today and Receive 100% guaranteed access to our servers!
+    </p>
 
 
-</div>
-<div id="midBar">
-    <h1>Welcome!</h1>
-
-    <div id="login">
-        <form id="loginForm">
-            <label>Username: </label><input name="signinButton" type="text" id="user"/><br>
-            <label>Password: </label><input name="signinButton" type="password" id="pass" />
-            <input name="signinButton" type="button" id="signinButton" value="Sign In" />
-           </form>
-    </div>
-
-    <div id="cta">
-        <h2>Join Now!</h2>
-        <p>
-            Click here to join now!
-        </p>
-        <input name="regbtn" type="button" id="register" value="Sign Up" />
-    </div>
-</div>
-<div id="botBar">
-
-
-</div>
-
+    <div id="menu"> <!-- Floating Menu -->
+        <div id="cta">
+            <h3>Sign-Up Form</h3>
+            <p>
+            <div id="login">
+                <form id="loginForm">
+                    <label>First Name: </label><br><input name="signupButton" type="text" id="fname"/><br>
+                    <label>Last Name: </label><br><input name="signupButton" type="password" id="lname"/><br>
+                    <label>Username: </label><br><input name="signupButton" type="text" id="uname"/><br>
+                    <label>Password: </label><br><input name="signupButton" type="password" id="upass"/><br>
+                    <label>Email Address: </label><br><input name="signupButton" type="text" id="email"/><br>
+                    <label>Confirm Email Address: </label><br><input name="signupButton" type="password" id="confemail"/><br>
+                    <input name="signupButton" type="button" id="signupButton" value="Sign Up" />
+                </form>
+            </div>
+            </p>
+        </div>
+    </div> <!-- End Floating Menu -->
+</div> <!-- End Content Section -->
 </body>
 </html>

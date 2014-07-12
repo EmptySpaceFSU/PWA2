@@ -32,7 +32,6 @@ h2 {
 #botBar {
     color:#53563b;
     height:30vh;
-    width:;
     margin:0 50px 0 50px;
 }
 
@@ -47,6 +46,10 @@ h2 {
     border-style:solid;
     border-color:#60733d;
     border-radius:5px ;
+}
+
+#userTxt {
+    float: left;
 }
 
 /* An Idea for a floating menu at the bottom of the page. Doesn't look bad, needs work.
