@@ -1,0 +1,1 @@
+This directory holds all of my week 2 files. Ka-Chow!
