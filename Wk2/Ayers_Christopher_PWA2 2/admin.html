@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<!-- Christopher Ayers
+     Full Sail University
+     Week 2: Activity
+     Last Update: Jul-18-2014
+-->
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>eLEAF Project Management Software</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+	<link rel ="stylesheet" href="font-awesome-4.1.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	
+    <div id="topBar"> <!-- Top Nav Bar -->
+        <h2>Project Management Software for Landscapers</h2>
+        <img id="logo" src="img/logo.png" />
+
+    </div> <!-- End Top Nav Bar -->
+    
+    <div id="midBar"> <!-- Sign in Section -->
+        <input name="outBtn" type="button" id="signOut" value="Sign Out" />
+                    
+        <nav id="userTxt" class="nav_menu">
+            
+                <li><a href='#'>Welcome User</a></li>
+                <li><a href='#'>Dashboard</a></li>
+                <li><a href='#'>Sign-out</a></li>
+            
+        </nav>
+    </div> <!-- End Sign in Section -->
+
+    <div id="botBar"> <!-- Content Section -->
+        <p>
+            Admin Section
+        </p>
+        <div id="nav">
+        	<ul>
+            	<li><a href="#projects" class="fa fa-leaf fa-3x"></a></li>
+                <li><a href="#users" class="fa fa-users fa-3x"></a></li>
+                <li><a href="#tasks" class="fa fa-tasks fa-3x"></a></li>
+            </ul>
+        </div>
+        <div id="menu"> <!-- Floating Menu -->
+            <div id="tabs">
+                <p id="projects">
+                	
+                    Do you like getting things done? We thought so. All of your projects in one localized place,
+                    to get things done quickly and easily. That's right, all in one place, to get them done. That's
+                    taking care of business, taking-names style. It's time to cut grass and chew bubble gum, and
+                    we're all outta gum.  <br><br> Go to Projects... <button class="projectsbtn">Projects</button>
+                </p>
+                <p id="users">
+                	
+                    Is there more than one person working on your projects? Ours too. Luckily, we have this little
+                    wiffer-dilly that keeps things like individual users in their own lanes. Keep your stuff yours,
+                    and theirs, theirs. Unless you want to have a shared account, in which case, we do that too. We'll
+                    just need more dat earth green!  <br><br> Go to Users... <button class="usersbtn">Users</button>
+                </p>
+                <p id="tasks">
+                	
+                    What day is it anyway? It doesn't matter... because our task manager keeps track of stuff like that.
+                    Got stuff written down in chronolgical order scribbled into a napkin or inked on the back side of a 
+                    piece of mail? Task manager. Want to have updates sent directly to your phone? Task manager? Need a
+                    babysitter? Task Manager. Date for prom? Task Manager. Yea, it's that good.
+                      <br><br> Go to Tasks... <button class="tasksbtn">Tasks</button>
+                </p>
+            </div>
+        </div> <!-- End Floating Menu -->
+    </div> <!-- End Content Section -->
+    
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
