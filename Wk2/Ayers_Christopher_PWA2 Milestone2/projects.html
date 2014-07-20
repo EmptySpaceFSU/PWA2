@@ -37,25 +37,25 @@
     </div> <!-- End Content Section -->
 <div id="overlay">
     	<div id="modal">
-        	<span class="close fa fa-times"></span>
+        	<span class="close fa fa-times masterTooltip" title="Close"></span>
             <h3 class="header">Add Project</h3>
             <div id="add">
             	<form id="addForm">
                 	<label>Project Name: </label>
-                    	<input name="projectName" type="text" id="projectName" /><br>
+                    	<input name="projectName" class="masterTooltip" title="Enter Project Name" type="text" id="projectName" /><br>
                     <label>Project Description:</label>
-						<input name="projectDescription" type="text" id="projectDescription" /><br>
+						<input name="projectDescription" class="masterTooltip" title="Enter Project Description" type="text" id="projectDescription" /><br>
                     <label>Project Due Date:</label>
-                    	<input name="projectDueDate" type="text" id="ProjectDueDate" /><br>
+                    	<input name="projectDueDate" class="masterTooltip" title="Enter Due Date" type="text" id="ProjectDueDate" /><br>
                     <label for="status">Select status:</label> <br>
                     	<label class="mystatus">
-                        	<input type ="radio" name="status" id="urgent"> <span class="fa fa-flag fa-3x"></span></label>
+                        	<input type ="radio" name="status" id="urgent"> <span class="fa fa-flag fa-3x masterTooltip" title="Urgent"></span></label>
                     	<label class="mystatus">
-                        	<input type ="radio" name="status" id="normal"> <span class="fa fa-thumbs-o-up fa-3x"></span></label>
+                        	<input type ="radio" name="status" id="normal" > <span class="fa fa-thumbs-o-up fa-3x masterTooltip" title="Normal"></span></label>
                         <label class="mystatus">
-                        	<input type ="radio" name="status" id="delayed"> <span class="fa fa-calendar fa-3x"></span></label>
+                        	<input type ="radio" name="status" id="delayed"> <span class="fa fa-calendar fa-3x masterTooltip" title="Delayed"></span></label>
                         <label class="mystatus">
-                        	<input type ="radio" name="status" id="complete"> <span class="fa fa-check-square-o fa-3x"></span></label>
+                        	<input type ="radio" name="status" id="complete"> <span class="fa fa-check-square-o fa-3x masterTooltip" title="Complete"></span></label>
                          <br>
                          <input name="addButton" type="button" id="addButton" value="Add" />
                          </form>

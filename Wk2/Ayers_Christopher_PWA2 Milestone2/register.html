@@ -9,8 +9,7 @@
     <meta charset="UTF-8">
     <title>eLEAF Project Management Software</title>
     <link rel="stylesheet" href="css/stylesheet.css">
-    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script></head>
+</head>
 <body id="wrapper">
 <div id="topBar"> <!-- Top Nav Bar -->
     <h2>Project Management Software for Landscapers</h2>
@@ -34,12 +33,12 @@ Registering makes you a better person, gives your hair more volume, and whitens 
             <p>
             <div id="login">
                 <form id="loginForm">
-                    <label>First Name: </label><br><input name="signupButton" type="text" id="fname"/><br>
-                    <label>Last Name: </label><br><input name="signupButton" type="password" id="lname"/><br>
-                    <label>Username: </label><br><input name="signupButton" type="text" id="uname"/><br>
-                    <label>Password: </label><br><input name="signupButton" type="password" id="upass"/><br>
-                    <label>Email Address: </label><br><input name="signupButton" type="text" id="email"/><br>
-                    <label>Confirm Email Address: </label><br><input name="signupButton" type="password" id="confemail"/><br>
+                    <label>First Name: </label><br><input name="signupButton" class="masterTooltip" title="First Name" type="text" id="fname"/><br>
+                    <label>Last Name: </label><br><input name="signupButton" class="masterTooltip" title="Last Name" type="password" id="lname"/><br>
+                    <label>Username: </label><br><input name="signupButton" class="masterTooltip" title="Enter Username" type="text" id="uname"/><br>
+                    <label>Password: </label><br><input name="signupButton" class="masterTooltip" title="Enter Password" type="password" id="upass"/><br>
+                    <label>Email Address: </label><br><input name="signupButton" class="masterTooltip" title="Enter Email Address" type="text" id="email"/><br>
+                    <label>Confirm Email Address: </label><br><input name="signupButton" class="masterTooltip" title="Enter Email Again" type="password" id="confemail"/><br>
                     <input name="signupButton" type="button" id="signupButton" value="Sign Up" />
                 </form>
             </div>
@@ -47,5 +46,7 @@ Registering makes you a better person, gives your hair more volume, and whitens 
         </div>
     </div> <!-- End Floating Menu -->
 </div> <!-- End Content Section -->
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
