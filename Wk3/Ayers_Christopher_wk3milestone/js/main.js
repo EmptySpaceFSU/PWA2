@@ -152,4 +152,49 @@ $('.projectsbtn').on('click', function(e) {
     window.location.assign('projects.html');
 });
 
-/* ========================================================= */
+/* ================== Get Projects ======================================= */
+var projects = function() {
+    $.ajax({
+        url: 'xhr/get_projects.php',
+        type: 'get',
+        dataType: 'json',
+        success: function(response) {
+            if (response.error){
+                console.log(response.error);
+            } else {
+                for (var i= 0,j=response.projects.length; i<j;i++){
+                    var result = response.projects[i];
+                    $('.projects').append(
+                        '<div style="border:1px solid green">' +
+                        '<input class="projectid" type="hidden" value="' + result.id + '">' +
+                        'Project Name: ' + result.projectName + '<br>' +
+                        'Project Description: ' + result.projectDescription + '<br>' +
+                        'Project Status: ' + result.status + '<br>' +
+                        '<button class="deletebtn">Delete</button>' +
+                        '<button class="editbtn">Edit</button> ' + '</div> <br>')
+                }
+                $('.deletebtn').on('click', function(e) {
+                    console.log('test delete');
+                    $.ajax({
+                        url: 'xhr/delete_project.php',
+                        data: {
+                            projectID:result.id
+                        },
+                        type:'post',
+                        dataType:'json',
+                        success: function(response) {
+                            console.log('Test for Success!');
+
+                            if (response.error) {
+                                alert(response.error);
+                            }else{
+                                window.location.assign("projects.html");
+                            }
+                        }
+                    });
+                }); // End delete
+            } // End if
+        } // .ajax pull kill
+    })
+};
+projects();

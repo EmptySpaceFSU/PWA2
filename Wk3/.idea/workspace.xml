@@ -26,11 +26,32 @@
       <file leaf-file-name="main.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Ayers_Christopher_wk3milestone/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35897437" vertical-offset="534" max-vertical-offset="2400">
-              <caret line="44" column="101" selection-start-line="44" selection-start-column="101" selection-end-line="44" selection-end-column="101" />
+            <state vertical-scroll-proportion="0.8684211" vertical-offset="2070" max-vertical-offset="3075">
+              <caret line="171" column="51" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <marker date="1406272411000" expanded="true" signature="4861:4883" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projects.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ayers_Christopher_wk3milestone/projects.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.25" vertical-offset="210" max-vertical-offset="1110">
+              <caret line="32" column="102" selection-start-line="32" selection-start-column="102" selection-end-line="32" selection-end-column="102" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stylesheet.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Ayers_Christopher_wk3milestone/css/stylesheet.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1884" max-vertical-offset="2655">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -61,6 +82,7 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Ayers_Christopher_wk3milestone/index.html" />
         <option value="$PROJECT_DIR$/Ayers_Christopher_wk3milestone/register.html" />
+        <option value="$PROJECT_DIR$/Ayers_Christopher_wk3milestone/projects.html" />
         <option value="$PROJECT_DIR$/Ayers_Christopher_wk3milestone/js/main.js" />
       </list>
     </option>
@@ -69,7 +91,7 @@
     <option name="x" value="16" />
     <option name="y" value="22" />
     <option name="width" value="1413" />
-    <option name="height" value="655" />
+    <option name="height" value="874" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -144,7 +166,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -239,11 +261,11 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="16" y="22" width="1413" height="655" extended-state="0" />
+    <frame x="16" y="22" width="1413" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2372449" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32920355" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17097701" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -293,6 +315,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-31.112427" vertical-offset="10516" max-vertical-offset="11040">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -350,6 +373,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Ayers_Christopher_wk3milestone/css/stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2655">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Ayers_Christopher_wk3milestone/projects.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25" vertical-offset="210" max-vertical-offset="1110">
+          <caret line="32" column="102" selection-start-line="32" selection-start-column="102" selection-end-line="32" selection-end-column="102" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Ayers_Christopher_wk3milestone/admin.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="27.5" vertical-offset="660" max-vertical-offset="1230">
@@ -360,10 +399,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Ayers_Christopher_wk3milestone/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35897437" vertical-offset="534" max-vertical-offset="2400">
-          <caret line="44" column="101" selection-start-line="44" selection-start-column="101" selection-end-line="44" selection-end-column="101" />
+        <state vertical-scroll-proportion="0.8684211" vertical-offset="2070" max-vertical-offset="3075">
+          <caret line="171" column="51" selection-start-line="171" selection-start-column="51" selection-end-line="171" selection-end-column="51" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <marker date="1406272411000" expanded="true" signature="4861:4883" placeholder="..." />
           </folding>
         </state>
       </provider>
