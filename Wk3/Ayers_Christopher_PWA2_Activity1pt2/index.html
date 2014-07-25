@@ -1,0 +1,59 @@
+<!-- Christopher Ayers
+     Full Sail University
+     23 Jul 2014
+     Week 3, Activity 1 Part 2
+-->
+
+<!doctype html>                                     <!-- An instruction for the browser, HTML 5. -->
+<html lang="en">                                    <!-- Tells the browser this is an HTML Doc, in english. -->
+<head>                                              <!-- An element container, required for the <title> tag. -->
+    <meta charset="utf-8">                          <!-- Machine parse-able information about the page. Also
+                                                         defined the character encoding. -->
+    <title>jQuery.getJSON demo</title>              <!-- This is the text that displays in the Title bar. -->
+    <style>                                         /* Holds definitions for hot elements will look in
+                                                       the document. */
+    img {                                           /* CSS definition for the img tag display properties. */
+        height: 100px;                              /* How many pixels the image is top to bottom. */
+        float: left;                                /* Floating pushes an element as far horizontally as it is
+                                                       able to go. */
+    }
+    </style>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+                                                    <!-- Script tags define client-side scripts, or point to
+                                                         external script files. -->
+</head>
+<body>                                              <!-- Defines the document's body. -->
+<div id="images"></div>                             <!-- Sets the container for the images -->
+<script>                                            //   Defined Above.
+(function() {                                       //   A function that automatically starts.
+    var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+                                                    //   This variable holds the API url, and signals that data
+                                                    //   returned must be in the JSON-P format. (callback=?)
+    $.getJSON( flickerAPI, {                        //   JQuery shortcut method for utilizing built-in AJAX
+                                                    //   method for retrieving and processing JSON data.
+        tags: "mount rainier",                      //   The second argument to the .getJSON method that allows
+        tagmode: "any",                             //   for specific parameters to be sent with the request.
+        format: "json"                              //   This being handled with the callback in the URL, but
+    })                                              //   this is another way to ensure the data is parsed as JSON.
+            .done(function( data ) {                //   Upon successful return of data, this function takes place.
+                $.each( data.items, function( i, item ) {
+                                                    //   This string takes the returned data, and iterates through
+                                                    //   each returned item in the object array.
+                    $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+                                                    //   This line looks in the item for an image by tag, then
+                                                    //   the 'src' and its value link, then appends that to the
+                                                    //   'images' div defined in the DOM.
+                    if ( i === 3 ) {                //   On the 4th iteration, we break the loop by returning
+                        return false;               //   this line, as false.
+                    }
+                });
+            });
+})();
+</script>
+</body>                                             <!-- After reviewing this code, I find it to be less than
+                                                         efficient. We should not be updating the DOM on each
+                                                        iteration, rather, we should be appending each iteration
+                                                        to a variable, then sending that array/"appending html string"
+                                                        outside of the loop.
+                                                    -->
+</html>
