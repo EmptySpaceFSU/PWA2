@@ -42,9 +42,9 @@ $('#nav li .current').removeClass("current");
 
 /* ========================================================= */
 
-$('.projectsbtn').click(function(e) {
-	window.location.href='projects.html';
-});
+//$('.projectsbtn').click(function(e) {                         Updated the code below to assignment.
+//	window.location.href='projects.html';
+//});
 
 /* ========================================================= */
 $('.masterTooltip').hover(function() {
@@ -103,10 +103,53 @@ $(function(ready) {
 });
 
 
-/* ========================================================= */
+/* ===================== Register ==================================== */
+$(function(ready){
+   $('#register').on('click', function(){
+      var lastname = $('#last').val(),
+          firstname = $('#first').val(),
+          username = $('#userName').val(),
+          email1 = $('#email1').val(),
+          email2 = $('#email2').val(),
+          password = $('#password').val();
+      //console.log(lastname + ' ' + firstname + ' ' + username + ' ' + email1 + ' ' + password);
+
+       if (email1 == email2) {
+           $.ajax({
+               url: 'xhr/register.php',
+               type: 'post',
+               dataType: 'json',
+               data: {
+                   firstname: firstname,
+                   lastname: lastname,
+                   username: username,
+                   email: email1,
+                   password: password
+               },
+
+               success: function(response){
+                   if (response.error){
+                       alert(response.error);
+                   } else {
+                       window.location.assign('admin.html');
+                   } // end if
+               } // end success
+           }); // end Ajax request
+       } else {
+            alert('Emails do not match');
+           $('#email1').val('');                // Clear box 1
+           $('#email2').val('');                // Clear box 2
+           $('#email1').focus();                // Give box 1 focus.
+       }
+
+   });
+});
 
 
-/* ========================================================= */
-
+/* ================= Go to Projects page ======================================== */
+$('.projectsbtn').on('click', function(e) {
+    e.preventDefault();
+    window.location.assign('projects.html');
+});
 
 /* ========================================================= */
