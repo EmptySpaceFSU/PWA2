@@ -437,7 +437,7 @@
 $(function (ready) {                                                        // I find this cleaner.
         $('#zipCode').change(function(e) {
             var zipCode = $(this).val();
-            alert(zipCode);                                                 // For bug testing.
+            //alert(zipCode);                                                 // For bug testing.
             console.log('The zip code being sent is ' + zipCode);           // Also, for bug testing.
 
             var requestURL = 'http://ziptasticapi.com/' + zipCode + '?callback=?';  // concatenating the request.
@@ -447,10 +447,11 @@ $(function (ready) {                                                        // I
 
             if (data.city) $('#city').val(data.city);                   // Update #city box if city returned w/ data.
             if (data.state) $('#state').val(data.state);                // Update #state pulldown if returned w/ data.
-
-            }); // Close getJSON function
-        }); // Close .change event function
+            if (data.error) $('#zipCode').val('');                      // I added this to clear out the zip code
+            }); // Close getJSON function                                  for the user. They will be told to fill
+        }); // Close .change event function                                the box in if they submit.
 }); // End Document Ready script
+
 </script>
 </body>
 
