@@ -434,7 +434,7 @@
 <script>
 "use strict";
 
-$(document).ready(function () {
+$(function (ready) {                                                        // I find this cleaner.
         $('#zipCode').change(function(e) {
             var zipCode = $(this).val();
             alert(zipCode);                                                 // For bug testing.
