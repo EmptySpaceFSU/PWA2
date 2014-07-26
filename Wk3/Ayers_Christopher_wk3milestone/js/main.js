@@ -218,3 +218,33 @@ var projects = function() {
     })
 };
 projects();
+
+/* ================= Add Project =================== */
+$('#addButton').on('click', function() {
+
+    var projName = $('#projectName').val(),
+        projDesc = $('#projectDescription').val(),
+        projDue = $('#projectDueDate').val(),
+        status = $('input[name = "status"]:checked').prop('id');
+
+    $.ajax({
+        url: "xhr/new_project.php",
+        type: "post",
+        dataType: "json",
+        data: {
+            projectName: projName,
+            projectDescription: projDesc,
+            dueDate: projDue,
+            status: status
+        },
+        success: function(response) {
+            console.log('testing for success');
+
+            if(response.error) {
+                alert(response.error);
+            } else {
+                window.location.assign("projects.html");
+            };
+        }
+    });
+});
