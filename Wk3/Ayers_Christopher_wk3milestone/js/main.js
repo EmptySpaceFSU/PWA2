@@ -193,12 +193,12 @@ var projects = function() {
                 });
                 $('.deletebtn').on('click', function(e) {
                     console.log('test delete');
-                    var pID = $(this).parent('div').find('.projectid').val();
+                    var pID = $(this).parent('div').find('.projectid').val();   // Find the specific project ID.
                     console.log(pID);
                     $.ajax({
                         url: 'xhr/delete_project.php',
                         data: {
-                            projectID:result.id
+                            projectID:pID                           // Delete the specific project ID in question.
                         },
                         type:'post',
                         dataType:'json',
