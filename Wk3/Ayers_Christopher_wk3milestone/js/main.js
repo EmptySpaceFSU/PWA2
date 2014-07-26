@@ -5,6 +5,19 @@
  * Week 3: Milestone Project
  */
 
+/* ==================== Display Username =================== */
+
+$.getJSON('xhr/check_login.php', function(data) {
+    console.log(data);                  // Debug Test
+    $.each(data, function(key, val){
+        console.log(val.first_name);
+        var nameIs = val.first_name;
+        $('#userid').html("Welcome User: " + nameIs);
+    })
+})
+
+
+
 /* ======================== Modal =========================== */
 
 $('.modalClick').on('click', function(event) {
@@ -46,7 +59,7 @@ $('#nav li .current').removeClass("current");
 //	window.location.href='projects.html';
 //});
 
-/* ========================================================= */
+/* ================= ToolTips ======================================== */
 $('.masterTooltip').hover(function() {
 	console.log('working!');
 	var title = $(this).attr('title');
@@ -173,8 +186,15 @@ var projects = function() {
                         '<button class="deletebtn">Delete</button>' +
                         '<button class="editbtn">Edit</button> ' + '</div> <br>')
                 }
+                $('.editbtn').on('click', function(e) {
+                    console.log('test edit');
+                    var pID = $(this).parent('div').find('.projectid').val();
+                    console.log(pID);
+                });
                 $('.deletebtn').on('click', function(e) {
                     console.log('test delete');
+                    var pID = $(this).parent('div').find('.projectid').val();
+                    console.log(pID);
                     $.ajax({
                         url: 'xhr/delete_project.php',
                         data: {
