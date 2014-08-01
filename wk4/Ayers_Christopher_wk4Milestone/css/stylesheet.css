@@ -1,0 +1,184 @@
+body {
+    background-color: white;
+    margin:0;
+    padding:0;
+    min-width:570px;
+    min-height:500px;
+}
+
+h2 {
+    float:right;
+    font-size: 1.5em;
+}
+
+form {
+	padding:10px;
+}
+
+form.input {
+	padding:10px;
+}
+
+nav {
+	float:left;
+}
+.nav_menu li{
+	list-style-type:none;
+	display:inline;
+	
+}
+.nav_menu li a {
+	text-decoration:none;
+	color:white;	
+}
+.nav_menu li a:hover {
+	text-decoration:none;
+	color:#CCC;	
+}
+/* Top Section of page */
+#topBar {
+
+    background-color: white;
+    width:100%;
+    height:30%;
+    margin-bottom:5px;
+    min-height:80px;
+
+}
+/* Middle Section of page */
+#midBar {
+    background-color: #a59a6d;
+    text-align:right;
+    Height:auto;
+    margin:0;
+
+}
+/* Bottom Section of page */
+#botBar {
+    color:#53563b;
+    height:30vh;
+    margin:0 50px 0 50px;
+}
+
+#logo {
+    width:75px;
+}
+
+#menu {
+    font-size: .8em;
+    color:#222222;
+    background-color: rgba(136,161,88,0.3);
+    border-style:solid;
+    border-color:#60733d;
+    border-radius:5px ;
+}
+
+#userid {
+    float: left;
+}
+
+#overlay {
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,.5);
+	position: absolute;
+	top:0;
+	left:0;
+	z-index:1000;
+	display:none;
+}
+
+#modal {
+	width: 350px;
+	background: #ccc;
+	box-shadow:0 0 10px #000;
+	border-radius:10px;
+	overflow:hidden;
+	position:relative;
+	top:50%;
+	left:50%;
+	margin-top:-200px;
+	margin-left:-200px;
+	z-index:1001;
+	display:none;
+}
+
+#modal .close {
+	position: absolute;
+	right:5px;
+	top:5px;
+	font-size:16px;
+	font-weight:bold;
+	padding:5px 10px;
+	border:1px solid #ccc;
+	cursor: pointer;
+	background-color:#f00;
+}
+
+#modal .header {
+	background:#a59a6d;
+	color:#fff;
+	padding:10px;
+}
+
+#modal p {
+	margin:15px;
+}
+#nav li {
+	display:inline;	
+	margin-right:25px;
+}
+#nav a {
+		color:#53563b;
+		text-decoration:none;
+}
+#nav a:hover {
+	color:#DBE3CE
+}
+/* Font Awesome Radio Button Control here. */
+/* 	I am using the font system by Font Awesome for my radio buttons.
+	Since I'm using the CSS method below to swap the colors, the hover method
+	is no longer a viable option. I could have made small divs to encompass the
+	characters, but this just looks really clean. */
+input[type="radio"] {						
+	display:none;							
+}											 
+
+input[type="radio"] + span:before {
+	color:black;
+}
+
+.mystatus .fa {
+	padding:10px;
+}
+
+input[type="radio"]:checked + span:before {
+	color: green;	
+}
+/* **************************************** */
+.tooltip {
+	display:none;
+	position: absolute;
+	border: 1px solid #333;
+	background-color: #CC9;
+	border-radius:5px;
+	padding:10px;
+	color:#360;
+	font-size: 14px;
+	z-index:1002;
+}
+
+
+
+/* ***************** Provided by JQuery-ui.com **************************************** */
+/* ********************************************************** Sortable / Draggable **** */
+#sortable { list-style-type: none; margin: 0 0 3px 3px; padding: 3px; width: 60%; border-radius:5px;border:solid 1px #285c00}
+#sortable li { margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.4em; height: 18px; }
+#sortable li span { position: absolute; margin-left: -1.3em; }
+
+/* ********************************************************** Puff Effect ************* */
+.toggler { width: 500px; height: 200px; position: relative; }
+#button { padding: .5em 1em; text-decoration: none; }
+#effect { width: 240px; height: 135px; padding: 0.4em; position: relative; }
+#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+.ui-effects-transfer { border: 2px dotted gray; }
