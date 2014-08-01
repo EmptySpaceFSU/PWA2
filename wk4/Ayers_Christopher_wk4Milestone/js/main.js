@@ -117,20 +117,26 @@ $(function(ready) {
 
 
 /* ===================== Register ==================================== */
+
+
 $(function(ready){
-   $('#register').on('click', function(){
-      var lastname = $('#last').val(),
-          firstname = $('#first').val(),
+    $('#registerbtn').on('click',function(){
+        window.location.assign('register.html');        // Link from the homepage to registration.
+    });
+
+
+   $('#register').on('click', function(){               // This button assigns everything to variables
+      var lastname = $('#last').val(),                  // to later pass back to the server in an AJAX
+          firstname = $('#first').val(),                // message.
           username = $('#userName').val(),
           email1 = $('#email1').val(),
           email2 = $('#email2').val(),
           password = $('#password').val();
-      //console.log(lastname + ' ' + firstname + ' ' + username + ' ' + email1 + ' ' + password);
 
-       if (email1 == email2) {
-           $.ajax({
-               url: 'xhr/register.php',
-               type: 'post',
+       if (email1 == email2) {                          // This function passes information back
+           $.ajax({                                     // to the server to build a user profile.
+               url: 'xhr/register.php',                 // It checks to make sure that the email
+               type: 'post',                            // address match before moving forward.
                dataType: 'json',
                data: {
                    firstname: firstname,
@@ -144,8 +150,8 @@ $(function(ready){
                    if (response.error){
                        alert(response.error);
                    } else {
-                       window.location.assign('admin.html');
-                   } // end if
+                       window.location.assign('admin.html');    // If all goes well, you are moved
+                   } // end if                                     to the admin page.
                } // end success
            }); // end Ajax request
        } else {
