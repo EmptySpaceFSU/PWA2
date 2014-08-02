@@ -139,7 +139,7 @@ nav {
 /* 	I am using the font system by Font Awesome for my radio buttons.
 	Since I'm using the CSS method below to swap the colors, the hover method
 	is no longer a viable option. I could have made small divs to encompass the
-	characters, but this just looks really clean. */
+	characters, but this just looks much cleaner. */
 input[type="radio"] {						
 	display:none;							
 }											 

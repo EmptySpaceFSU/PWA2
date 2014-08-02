@@ -1,8 +1,8 @@
 /**
  * Christopher Ayers
  * Full Sail University
- * Last Update: Jul-24-2014
- * Week 3: Milestone Project
+ * Last Update: Aug-1-2014
+ * Week 4: Milestone Project
  */
 
 /* ==================== Display Username =================== */
@@ -52,12 +52,6 @@ $('#nav li .current').removeClass("current");
 	$('#tabs ' + clicked).fadeIn('fast');
 	console.log(clicked);
 }).eq(0).addClass('current');
-
-/* ========================================================= */
-
-//$('.projectsbtn').click(function(e) {                         Updated the code below to assignment.
-//	window.location.href='projects.html';
-//});
 
 /* ================= ToolTips ======================================== */
 $('.masterTooltip').hover(function() {
@@ -156,9 +150,9 @@ $(function(ready){
            }); // end Ajax request
        } else {
             alert('Emails do not match');
-           $('#email1').val('');                // Clear box 1
-           $('#email2').val('');                // Clear box 2
-           $('#email1').focus();                // Give box 1 focus.
+           $('#email1').val('');                // Clear box 1          This is the section that clears
+           $('#email2').val('');                // Clear box 2          out the email fields for the user
+           $('#email1').focus();                // Give box 1 focus.    if the emails do not match.
        }
 
    });
@@ -166,15 +160,15 @@ $(function(ready){
 
 
 /* ================= Go to Projects page ======================================== */
-$('.projectsbtn').on('click', function(e) {
-    e.preventDefault();
-    window.location.assign('projects.html');
+$('.projectsbtn').on('click', function(e) {                     // A simple function to take the user to
+    e.preventDefault();                                         // their projects section, while preventing
+    window.location.assign('projects.html');                    // default system actions.
 });
 
 /* ================== Get Projects ======================================= */
-var projects = function() {
-    $.ajax({
-        url: 'xhr/get_projects.php',
+var projects = function() {                                     // This ajax request pings the server for the
+    $.ajax({                                                    // projects assigned to the user that is
+        url: 'xhr/get_projects.php',                            // currently signed in.
         type: 'get',
         dataType: 'json',
         success: function(response) {
@@ -184,20 +178,17 @@ var projects = function() {
                 for (var i= 0,j=response.projects.length; i<j;i++){
                     var result = response.projects[i];
                     $('.projects').append(
-                       // '<div style="border:1px solid green">' +
-                        '<div id="sortable" class="ui-state-default">' +
+                        '<div id="sortable" class="ui-state-default">' +    // This was updated for the dragging UI.
                         '<input class="projectid" type="hidden" value="' + result.id + '">' +
                         'Project Name: ' + result.projectName + '<br>' +
                         'Project Description: ' + result.projectDescription + '<br>' +
                         'Project Status: ' + result.status + '<br>' +
-                        '<button class="deletebtn">Delete</button>' +
-                        '<button class="editbtn">Edit!</button> ' + '</div> <br>')
-                }
+                        '<button class="deletebtn">Delete</button>');
+                        //'<button class="editbtn">Edit!</button> ' + '</div> <br>')
+                }   // I took out the edit button, but left in start of the functionality behind it.
+                    // I did this because it keeps the site looking better.
                 $('.editbtn').on('click', function(e) {
-                    console.log('test edit');
-                    var pID = $(this).parent('div').find('.projectid').val();
-                    console.log(pID);
-                });
+                }
                 $('.deletebtn').on('click', function(e) {
                     console.log('test delete');
                     var pID = $(this).parent('div').find('.projectid').val();   // Find the specific project ID.
@@ -219,7 +210,7 @@ var projects = function() {
                                 } else {
                                     window.location.assign("projects.html");
                                 }
-                            }
+                            } // End Success function
                         }); // End Ajax request
                     },500); // End Time Delay
                     }); // End delete
@@ -259,6 +250,8 @@ $('#addButton').on('click', function() {
         }
     });
 });
+/* ================== Edit Project =================== */
+
 
 /* ================== Sortable ======================= */
 $(function() {
