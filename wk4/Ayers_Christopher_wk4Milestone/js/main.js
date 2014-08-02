@@ -4,7 +4,8 @@
  * Last Update: Aug-1-2014
  * Week 4: Milestone Project
  */
-
+/* ==================== Global Variable =================== */
+var global;         // This was strictly to get the edit function working. I needed a way to hold the project ID.
 /* ==================== Display Username =================== */
 
 $.getJSON('xhr/check_login.php', function(data) {
@@ -22,6 +23,8 @@ $.getJSON('xhr/check_login.php', function(data) {
 
 $('.modalClick').on('click', function(event) {
 	event.preventDefault();
+    $('#addButton').css('display','block');
+    $('#editButton').css('display','none');
 	$('#overlay')
 		.fadeIn()
 		.find('#modal')
@@ -54,12 +57,13 @@ $('#nav li .current').removeClass("current");
 }).eq(0).addClass('current');
 
 /* ================= ToolTips ======================================== */
+
 $('.masterTooltip').hover(function() {
-	console.log('working!');
-	var title = $(this).attr('title');
-	$(this).data('tipText', title).removeAttr('title');
-	$('<p class="tooltip"></p>')
-	.text(title)
+	console.log('working!');                                                    // Breadcrumb for debugging.
+	var title = $(this).attr('title');                                          // Looks for anything with a
+	$(this).data('tipText', title).removeAttr('title');                         // class of masterTooltip, then
+	$('<p class="tooltip"></p>')                                                // Create and send a tooltip
+	.text(title)// to the page.
 	.appendTo('body')
 	.fadeIn('slow');
 }, function() {
@@ -79,9 +83,9 @@ $(function (ready) {
         var pass = $('#pass').val();
         console.log('Can you see this?');
 
-        $.ajax({
-            url: 'xhr/login.php',
-            type: 'post',
+        $.ajax({                                                        // Retrieve the login script, pass it the
+            url: 'xhr/login.php',                                       // variables to login, and check for
+            type: 'post',                                               // errors.
             dataType: 'json',
             data: {
                 username: user,
@@ -103,8 +107,8 @@ $(function (ready) {
 $(function(ready) {
    $('#signOut').click(function(e){
        e.preventDefault;
-       $.get('xhr/logout.php', function(){
-           window.location.assign('index.html');
+       $.get('xhr/logout.php', function(){              // Retrieve the script for the logout functionality.
+           window.location.assign('index.html');        // Return back to the main page.
        });
    });
 });
@@ -183,12 +187,17 @@ var projects = function() {                                     // This ajax req
                         'Project Name: ' + result.projectName + '<br>' +
                         'Project Description: ' + result.projectDescription + '<br>' +
                         'Project Status: ' + result.status + '<br>' +
-                        '<button class="deletebtn">Delete</button>');
-                        //'<button class="editbtn">Edit!</button> ' + '</div> <br>')
-                }   // I took out the edit button, but left in start of the functionality behind it.
-                    // I did this because it keeps the site looking better.
-                $('.editbtn').on('click', function(e) {
+                        '<button class="deletebtn">Delete</button>' +
+                        '<button class="editbtn">Edit!</button> ' + '</div> <br>')
                 }
+                $('.editbtn').on('click', function(e) {
+                    var pID = $(this).parent('div').find('.projectid').val();   // I nailed the functionality of the
+                    global = pID;                                               // edit button. I'm reusing the same
+                    $('#addButton').css('display','none');                      // modal, but hiding buttons depending
+                    $('#editButton').css('display','block');                    // on which sort of functionality I'm
+                    $('#overlay').fadeIn().find('#modal').fadeIn();             // trying to address.
+
+                });
                 $('.deletebtn').on('click', function(e) {
                     console.log('test delete');
                     var pID = $(this).parent('div').find('.projectid').val();   // Find the specific project ID.
@@ -251,7 +260,35 @@ $('#addButton').on('click', function() {
     });
 });
 /* ================== Edit Project =================== */
+$('#editButton').on('click', function() {
+    var pID = global;
+    var projName = $('#projectName').val(),
+        projDesc = $('#projectDescription').val(),
+        projDue = $('#projectDueDate').val(),
+        status = $('input[name = "status"]:checked').prop('id');
 
+    $.ajax({
+        url: 'xhr/update_project.php',
+        data: {
+            projectID: pID,
+            projectName: projName,
+            projectDescription: projDesc,
+            dueDate: projDue,
+            status: status
+        },
+        type: 'post',
+        dataType: 'json',
+        success: function (response) {
+            console.log('Test for Success!');
+
+            if (response.error) {
+                alert(response.error);
+            } else {
+                window.location.assign("projects.html");
+            }
+        } // End Success function
+    }); // End Ajax request
+});
 
 /* ================== Sortable ======================= */
 $(function() {
